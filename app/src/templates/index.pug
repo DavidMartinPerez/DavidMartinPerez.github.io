@@ -1,15 +1,14 @@
-include ./components/variables
+include ./shared/variables
 doctype
 html(lang='es-Es')
     head
-        include ./components/head-tag
+        include ./shared/head-tag
         title prueba prueba
     body
-        include ./components/header
+        include ./shared/header
 
         main
-            p prueba
+            p prueba main body
 
-        include ./components/footer
-        //- script(src=VENDORJS)
-        //- script(src=BUNDLEJS)
+        include ./shared/footer
+        script(src=SCRIPT)

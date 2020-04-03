@@ -49,11 +49,13 @@ const CONFIG = {
 /** configuración de url, variables de PUG */
 const CONFIG_PUG = {
     /** Url del style para el index.html */
-    style: `${CONFIG.ENTORNO}${CONFIG.DIST.SCRIPT}${STYLE_UUID}`,
+    STYLE: `${CONFIG.ENTORNO}${CONFIG.DIST.CSS}${STYLE_UUID}`,
     /** Url del javascript para el index.html */
-    script: `${CONFIG.ENTORNO}${CONFIG.DIST.CSS}${SCRIPT_UUID}`,
+    SCRIPT: `${CONFIG.ENTORNO}${CONFIG.DIST.SCRIPT}${SCRIPT_UUID}`,
     /** Url del css que importa la fuente para el index.html */
-    firacode: `${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}font/fira-code/fira_code.css`
+    FIRACODE: `${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}font/fira-code/fira_code.css`,
+    //** Url del favicon de la web */
+    FAVICON: `${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}img/favicon.ico`
 }
 
 module.exports = {
