@@ -1,0 +1,23 @@
+// Variables
+%notoFonts{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+%fira-code-font{
+    font-family: 'Fira Code', 'Noto Sans TC';
+}
+
+%hoverDefault{
+    border-bottom: 1px dashed;
+    border-bottom-color: transparent;
+    transition: border-bottom-color .2s;
+}
+%hoverActive{
+    border-bottom-color: $colorHovers;
+    transition: border-bottom-color 0s;
+    opacity: 1;
+}
+.hoverColor{
+    @extend %hoverDefault;
+    @extend %hoverActive;
+    color: $colorHovers;
+}

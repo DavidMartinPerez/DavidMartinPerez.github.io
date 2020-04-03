@@ -1,0 +1,71 @@
+//experience - Home
+span.icon-clock {
+    padding-right: 5px;
+    color: darken( $colorHovers, 50% ) !important;
+    &.white {
+        color: #fff !important;
+    }
+
+}
+
+ul.jobs {
+    margin: 0;
+    padding: 0;
+    li.enterprise {
+        position: relative;
+        list-style: none;
+        .info {
+            .name {
+                color: $colorHovers;
+                display: inline-block;
+                margin-right: 25px;
+            }
+            .timein {
+                font-size: 12px;
+                display: inline-block;
+                text-align: right;
+                span {
+                    color: $colorHovers;
+                }
+            }
+        }
+        ul.responsibilities {
+            li {
+                list-style: none;
+                position: relative;
+                &::before {
+                    content: "\2022";
+                    position: absolute;
+                    color: $colorHovers;
+                    left: -20px;
+                    top: -3px;
+                }
+                margin-bottom: 15px;
+                .job {
+                    border-bottom: .5px solid $colorHovers;
+                    line-height: 25px;
+                    width: fit-content;
+                    margin-bottom: 12px;
+                }
+                .make {
+                    line-height: 20px;
+                    font-size: 14px;
+                    span {
+                        color: $colorHovers;
+                    }
+                }
+                .timein {
+                    font-size: 12px;
+                    text-align: right;
+                    span {
+                        color: $colorHovers;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}

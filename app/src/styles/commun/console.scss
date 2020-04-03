@@ -1,0 +1,31 @@
+.container-console{
+    width: 100%;
+}
+.label-console{
+    margin: 0 auto;
+    width: 350px;
+    height: 25px;
+    max-width: 350px;
+    max-height: 25px;
+    background-color: #e4dcdc;
+    border-radius: 5px 5px 0px 0px;
+
+    color: #333;
+    text-align: center;
+}
+.console{
+    margin: 0 auto;
+    width: 350px;
+    height: 150px;
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: gray;
+}
+.console > p.typed{
+    padding: 15px;
+}
+.console > p.typed:before{
+    content: "$";
+    padding-right: 10px;
+}

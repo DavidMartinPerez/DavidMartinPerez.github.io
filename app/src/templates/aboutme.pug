@@ -1,0 +1,53 @@
+extends ./commun/layout
+
+append head
+    title Sobre mi - David Martín Pérez
+
+append content
+    h1.title
+        | < Conóceme
+        span.icon-emo-coffee
+        | &nbsp&nbsp/>
+    .wrapper
+        - var TWITTER = 'href="https://twitter.com/davililloperez';
+        - var GITHUB = 'https://github.com/DavidMartinPerez';
+        - var EMAIL = 'mailto:davidmartinperez1@gmail.com?Subject=Me%20encantaria%20decirte';
+        - var WHATSAPP = '';
+        - var INSTAGRAM = 'https://www.instagram.com/davililloperez/';
+
+        .menu-social
+            a(href=TWITTER title="Mandame un Tweet!" alt="link a mi twitter" target="_blank" rel="noopener noreferrer")
+                span.icon-twitter
+            a(href=GITHUB title="Sigueme en github!" alt="link a mi github" target="_blank" rel="noopener noreferrer")
+                span.icon-github-outline
+            a(href=EMAIL title="Mandame un correo!" alt="mandarme un correo" target="_blank" rel="noopener noreferrer")
+                span.icon-mail-outline
+            a(href=TWITTER title="Mandame un Tweet!" alt="sigueme en instagram" target="_blank" rel="noopener noreferrer")
+                span.icon-instagram-outline
+
+        p Buenas, me llamo&nbsp
+            span.hoverColor David
+            |  y soy&nbsp
+            span.hoverColor Frontend Developer.
+
+        p Desde muy pequeñito me apasiona todo el mundo de la informática
+            | y desde hace unos años el mundo de la programación y diseño web.
+
+        p Me encanta aprender nuevos lenguajes en mis tiempos libres,
+            | hacer deporte, caminar(por suerte tengo mi trabajo a solo 25min andando
+            span.icon-emo-laugh
+            | ),  jugar a videojuegos
+            | (Puedes echarle un ojo a mi colección&nbsp
+            a(target="_blank" href="#") aquí
+            | ).
+        p Conctáta conmigo en mi&nbsp
+            a(href=EMAIL) correo
+            | , habla conmigo en mi redes sociales como&nbsp
+            a(target="_blank" href="TWITTER" rel="noopener noreferrer") Twitter
+            | ,&nbsp
+            a(target="_blank" href="#" rel="noopener noreferrer") Facebook
+            | ,&nbsp
+            a(target="_blank" href=INSTAGRAM rel="noopener noreferrer") Instagram
+            | &nbspo echale un ojo a mi código en&nbsp
+            a(target="_blank" href=GITHUB rel="noopener noreferrer") Github
+            | .

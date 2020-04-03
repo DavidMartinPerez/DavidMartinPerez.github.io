@@ -1,0 +1,16 @@
+extends ./commun/layout
+
+append head
+    title Contáctame! - David Martín Pérez
+
+append content
+    h1.title < Contáctame />
+    .wrapper
+        form(action='#' method='method')
+            .form-group
+                label(for='email') Email
+                input.form-control(type='email', name='email' placeholder='Email' autofocus=true)
+            .form-group
+                label(for='password') Consulta
+                input.form-control(type='password', name='{:password}')
+            button.btn.btn-primary(type='submit') Enviar

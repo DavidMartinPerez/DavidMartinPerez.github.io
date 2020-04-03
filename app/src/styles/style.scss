@@ -1,0 +1,33 @@
+//##############################
+//Colors
+@import './commun/colors.scss';
+//##############################
+
+//##############################
+//Vars
+@import './commun/vars';
+//##############################
+
+//##############################
+//commons
+@import './commun/commons';
+//##############################
+
+
+//header
+@import 'commun/header';
+
+//Footer
+@import 'commun/footer';
+
+//console
+@import 'commun/console';
+
+
+//Pages
+@import './pages/404',
+        './pages/aboutme',
+        './pages/contactme',
+        './pages/experience',
+        './pages/principal',
+        './pages/projects';

@@ -1,0 +1,92 @@
+.contenedor, .contenedor .nubes {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: sans-serif; }
+
+.contenedor {
+  height: 100vh;
+  background: radial-gradient(#407BA0, #214154, #13242F); }
+  .contenedor .nubes {
+    position: relative;
+    width: 220px;
+    height: 220px; }
+    .contenedor .nubes img {
+      z-index: 20; }
+    .contenedor .nubes .mapa {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: url("../img/mapa.png");
+      background-size: cover;
+      border-radius: 50%;
+      box-shadow: -40px -20px 0 0 rgba(0, 0, 0, 0.15) inset, -70px -30px 0 0 rgba(0, 0, 0, 0.1) inset, 5px 5px 0 0 rgba(255, 255, 255, 0.3) inset;
+      animation: rotate 20s infinite linear; }
+
+.estrella {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute; }
+  .estrella:nth-child(2n) {
+    animation: brillar 2s linear infinite; }
+  .estrella:nth-child(2n+1) {
+    animation: brillar-2 2s linear infinite; }
+  .estrella:nth-child(1) {
+    top: 20%;
+    left: 50%; }
+  .estrella:nth-child(2) {
+    top: 30%;
+    left: 30%; }
+  .estrella:nth-child(3) {
+    top: 90%;
+    left: 90%; }
+  .estrella:nth-child(4) {
+    top: 80%;
+    left: 20%; }
+  .estrella:nth-child(5) {
+    top: 30%;
+    left: 80%; }
+  .estrella:nth-child(6) {
+    top: 70%;
+    left: 80%; }
+  .estrella:nth-child(7) {
+    top: 80%;
+    left: 50%; }
+  .estrella:nth-child(8) {
+    top: 80%;
+    left: 50%; }
+  .estrella:nth-child(9) {
+    top: 35%;
+    left: 10%; }
+  .estrella:nth-child(10) {
+    top: 60%;
+    left: 20%; }
+
+@keyframes rotate {
+  from {
+    background-position: left center; }
+  to {
+    background-position: -396px center; } }
+@keyframes brillar {
+  0% {
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3); }
+  90% {
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3); }
+  100% {
+    box-shadow: 0 0 13px 13px rgba(255, 255, 255, 0.3); } }
+@keyframes brillar-2 {
+  0%,35%, 50% {
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3); }
+  45% {
+    box-shadow: 0 0 13px 13px rgba(255, 255, 255, 0.3); } }
+
+/*# sourceMappingURL=style.css.map */
