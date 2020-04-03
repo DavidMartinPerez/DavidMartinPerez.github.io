@@ -62,6 +62,7 @@ typings/
 
 # Carpeta distribuición
 dist/
+build/
 
 #node
 node_modules

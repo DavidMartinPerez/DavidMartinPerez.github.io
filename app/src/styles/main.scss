@@ -1,0 +1,12 @@
+/** Vendor - scss de terceros */
+@import '0-plugins/0-plugins';
+/** Funciones, mixins, variables... */
+@import '1-helpers/1-helpers';
+/** Estilos globales, reseteo de estilos, tipografias*/
+@import '2-base/2-base';
+/** bloques grandes de html, sections, footer, navbar, header*/
+@import '3-layout/3-layout';
+/** Diseños de componentes, botones, columnas, listas */
+@import '4-modules/4-modules';
+/** Diseños especificos de una vista, index/home, contactos...  */
+@import '5-templates/5-templates';

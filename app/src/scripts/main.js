@@ -1,1 +1,1 @@
-console.log('javascript se carga correctamente');
+console.log('bundle se carga correctamente');

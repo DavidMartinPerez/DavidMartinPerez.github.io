@@ -29,9 +29,15 @@ function css() {
 
 /** funcion que se encarga de concatenar todos los archivos javascript */
 function js() {
-    return src(CONFIG.SRC.SCRIPT, { sourcemaps: true })
-        .pipe(concat(CONFIG.SCRIPT_UUID))
+    //BUNDLEJS - javascript propio
+    src(CONFIG.SRC.BUNDLEJS, { sourcemaps: true })
+        .pipe(concat(CONFIG.BUNDLEJS_UUID))
         .pipe(dest(`${CONFIG.DIST.FOLDER}${CONFIG.DIST.SCRIPT}`, { sourcemaps: true }))
+
+    //VENDORJS - javascript de terceros
+    return src(CONFIG.SRC.VENDORJS, { sourcemaps: true })
+            .pipe(concat(CONFIG.VENDORJS_UUID))
+            .pipe(dest(`${CONFIG.DIST.FOLDER}${CONFIG.DIST.SCRIPT}`, { sourcemaps: true }))
 }
 
 /** funcion para limpiar la carpeta distribuidora */

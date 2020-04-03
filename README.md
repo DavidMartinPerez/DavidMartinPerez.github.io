@@ -16,14 +16,20 @@ Arquitectura:
         - fonts, img, ect.
     - src
         - scripts <- Toda la logica de javascript
-            - main.js, otros scripts
+            - vendors <- scripts de terceros
+                - js
+            - main.js, otros scripts <- scripts propios
         - styles < - estilos en archivos scss
-            - commun <- estilos comunes en varias vistas TODO: 1
-                - colors, var, etc
+            - 0-plugins -> Vendor - scss de terceros
+            - 1-helpers -> Funciones, mixins, variables...
+            - 2-base -> Estilos globales, reseteo de estilos, tipografias
+            - 3-layout -> bloques grandes de html, sections, footer, navbar, header
+            - 4-modules -> Diseños de componentes, botones, columnas, listas
+            - 5-templates -> Diseños especificos de una vista, index/home, contactos...
             - style.scss <- archivo principal que reune todos los demas
         - templates <- todas las templates pug
             - components <- componentes comunes
-                - header, navbarm footer, etc
+                - header, navbar, footer, etc
             - views (index, html) <- documentos html que serán vistas
 
 TODO: 's:
