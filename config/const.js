@@ -1,86 +1,64 @@
-const { GET_URL_FILES, uuid } = require('./functions');
+const { uuid } = require('./functions');
 
-//URL BASE DE LA APLICACION
-const BASE_APP      = './app/';
-const URL_RESOURCES = 'src/';
+//CONST de archivos
+/** ID unico para eviar problemas de cacheo */
+const _uuid = uuid();
+/** Nombre del style con identificador unico para evitar cacheos */
+const STYLE_UUID = `style.${_uuid}.css`;
+/** Nombre del script con identificador unico para evitar cacheos */
+const SCRIPT_UUID = `script.${_uuid}.js`;
 
-//URL DE CONTENEDORES DE ARCHIVOS
-const URL_TEMPLATES = `${BASE_APP}${URL_RESOURCES}templates/`;
-const URL_STYLES    = `${BASE_APP}${URL_RESOURCES}styles/`;
-const URL_SCRIPTS   = `${BASE_APP}${URL_RESOURCES}scripts/`;
-const URL_ASSETS    = `${BASE_APP}assets/`;
+/** Archivo de configuración de todas las URL del entorno */
+const CONFIG = {
+    /** URL del Entorno */
+    ENTORNO : '/',
+    /** Nombre del style con identificador unico para evitar cacheos */
+    STYLE_UUID,
+    /** Nombre del script con identificador unico para evitar cacheos */
+    SCRIPT_UUID,
 
-//URL BASE DESTINO DE LOS FICHEROS
-const FOLDER_DIST        = './dist';
-const FOLDER_DIST_ASSEST = '/assetes/';
-const FOLDER_DIST_SCRIPT = 'js/';
-const FOLDER_DIST_STYLE  = 'css/';
-const FOLDER_DIST_IMG    = 'img/'
-
-// Rutas de ficheros:
-const URLS_TEMPLATES = {
-    SRC : `${URL_TEMPLATES}/*.pug`,
-    DEST: `${FOLDER_DIST}`
-};
-const URLS_STYLES = {
-    SRC : `${URL_STYLES}/style.scss`,
-    DEST: `${FOLDER_DIST}${FOLDER_DIST_ASSEST}${FOLDER_DIST_STYLE}`
-};
-const URLS_SCRIPTS = {
-    BUNDLE: {
-        SRC : `${URL_SCRIPTS}*.js`,
-        DEST: `${FOLDER_DIST}${FOLDER_DIST_ASSEST}${FOLDER_DIST_SCRIPT}`,
-        NAME: 'bundle.js',
+    /** URL SRC DE DONDE SE ENCUENTRAN LOS ARCHIVOS EN EL DESARROLLO */
+    SRC : {
+        /** Todos pug para ser transpilados a html */
+        PUG: './app/src/templates/*.pug',
+        /** Todos los js para ser concatenados a uno solo */
+        SCRIPT: './app/src/scripts/*.js',
+        /** El fichero pirncipal que incluye todos los SCSS para transpilarlos a CSS */
+        STYLE: './app/src/styles/style.scss',
+        /** Todos los archivos SCSS */
+        SCSS: '/app/src/styles/**',
+        /** Todos los assets que se quieren añadir */
+        ASSETS: [ './app/assets/**' ]
     },
-    VENDOR: {
-        SRC : `${URL_SCRIPTS}/lib/*.js`,
-        DEST: `${FOLDER_DIST}${FOLDER_DIST_ASSEST}${FOLDER_DIST_SCRIPT}`,
-        NAME: 'vendor.js'
+
+    /** URL PARA LA CARPETA DISTRIBUIDORA DE LOS ARCHIVOS CONTRIBUIDOS */
+    DIST : {
+        /** Carpeta en distribuidora distribuidora */
+        FOLDER : 'dist/',
+        /** Carpeta en distribuidora donde se encuentra en JS concatenado de todos */
+        SCRIPT : 'js/',
+        /** Carpeta en distribuidora donde se encuentra el CSS transpilado del SCSS */
+        CSS : 'css/',
+        /** Carpeta en distribuidora donde se encuentra los html transpilado del PUG */
+        HTML : '',
+        /** Carpeta en distribuidora donde se encuentra todos los assets, es una copia directa de lo que hay en assets */
+        ASSETS : 'assets/'
     }
-};
-const URLS_IMG = {
-    SRC : `${URL_ASSETS}/img/*`,
-    DEST: `${FOLDER_DIST}${FOLDER_DIST_ASSEST}${FOLDER_DIST_IMG}`
-};
-const URLS_FONTS = {
-    SRC : `${URL_ASSETS}font/**`,
-    DEST: `${FOLDER_DIST}${FOLDER_DIST_ASSEST}font/`
-};
-const URLS_ICONS_FONTELLO = {
-    CSS: {
-        SRC : `${URL_ASSETS}icons/css/fontello.css`,
-        DEST: `${FOLDER_DIST}${FOLDER_DIST_ASSEST}icons/css/`,
-    },
-    FONT: {
-        SRC : `${URL_ASSETS}icons/font/*`,
-        DEST: `${FOLDER_DIST}${FOLDER_DIST_ASSEST}icons/font/`
-    }
-};
+}
 
-let CONFIG_PUG = {
-    BUNDLEJS        : `${FOLDER_DIST_ASSEST}${FOLDER_DIST_SCRIPT}${URLS_SCRIPTS.BUNDLE.NAME}?v=${uuid()}`,
-    VENDORJS        : `${FOLDER_DIST_ASSEST}${FOLDER_DIST_SCRIPT}${URLS_SCRIPTS.VENDOR.NAME}?v=${uuid()}`,
-    STYLECSS        : `${FOLDER_DIST_ASSEST}${FOLDER_DIST_STYLE}style.css?v=${uuid()}`,
-    FONTELLOCSS     : `${FOLDER_DIST_ASSEST}icons/css/fontello.css?v=${uuid()}`,
-    FAVICON         : `${FOLDER_DIST_ASSEST}${FOLDER_DIST_IMG}favicon.png?v=${uuid()}`,
-    FONT_FIRACODE   : `${FOLDER_DIST_ASSEST}font/fira-code/fira_code.css?v=${uuid()}`,
-    //ENTORNO       : 'https://davidmartinperez.github.io/',
-    ENTORNO         : './',
-    PAGES           : {
-        EXPERIENCE      : 'experience.html',
-        PROJECTS        : 'projects.html',
-        ABOUTME         : 'aboutme.html',
-        CONTACTME       : 'contactme.html'
-    },
-};
+/** configuración de url, variables de PUG */
+const CONFIG_PUG = {
+    /** Url del style para el index.html */
+    style: `${CONFIG.ENTORNO}${CONFIG.DIST.SCRIPT}${STYLE_UUID}`,
+    /** Url del javascript para el index.html */
+    script: `${CONFIG.ENTORNO}${CONFIG.DIST.CSS}${SCRIPT_UUID}`,
+    /** Url del css que importa la fuente para el index.html */
+    firacode: `${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}font/fira-code/fira_code.css`
+}
 
 module.exports = {
-    URLS_TEMPLATES,
-    URLS_STYLES,
-    URLS_SCRIPTS,
-    URLS_IMG,
-    URLS_FONTS,
-    URLS_ICONS_FONTELLO,
-    FOLDER_DIST,
-    CONFIG_PUG
-};
+    /** configuración de url, variables de PUG */
+    CONFIG_PUG,
+    /** Archivo de configuración de todas las URL del entorno */
+    CONFIG
+}

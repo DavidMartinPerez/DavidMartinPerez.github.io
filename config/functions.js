@@ -1,14 +1,4 @@
 /**
-* Obtenemos la url completa de los archivos
-*/
-const GET_URL_FILES = ( arrayUrls, urlBase  ) => {
-
-   arrayUrls.forEach( (url,index) => arrayUrls[index] = `${urlBase}${url}` );
-
-   return arrayUrls;
-}
-
-/**
  * uuid unica para el querystring de los ficheros con los problemas de caché
  */
 const uuid = () => {
@@ -19,6 +9,5 @@ const uuid = () => {
 }
 
 module.exports = {
-    GET_URL_FILES,
     uuid
 }

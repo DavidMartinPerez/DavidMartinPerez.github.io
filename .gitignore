@@ -62,3 +62,6 @@ typings/
 
 # Carpeta distribuición
 dist/
+
+#node
+node_modules

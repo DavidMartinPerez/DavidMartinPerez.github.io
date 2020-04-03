@@ -1,15 +1,15 @@
-extends ./commun/layout
+include ./components/variables
+doctype
+html(lang='es-Es')
+    head
+        include ./components/head-tag
+        title prueba prueba
+    body
+        include ./components/header
 
-append head
-    title Principal - David Martín Pérez
+        main
+            p prueba
 
-append content
-    h1.title < Bienvenido />
-    .container-console
-        .label-console Terminal
-        .console
-            p.typed#typed-home
-    .wrapper
-        p ¡Os presento mi web!
-        p Me llamo David y aquí podréis conocer todo sobre mí vida laboral, mis proyectos personales, mis estudios y mis pasiones.
-        p Un saludo y que tengáis una buena visita.
+        include ./components/footer
+        //- script(src=VENDORJS)
+        //- script(src=BUNDLEJS)
