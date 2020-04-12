@@ -2,7 +2,7 @@ const { uuid } = require('./functions');
 
 //CONST de archivos
 /** ID unico para eviar problemas de cacheo */
-const _uuid = uuid();
+const _uuid = 'aa';
 /** Nombre del style con identificador unico para evitar cacheos */
 const STYLE_UUID = `style.${_uuid}.css`;
 /** Nombre del script con identificador unico para evitar cacheos */
@@ -24,14 +24,16 @@ const CONFIG = {
     SRC : {
         /** Todos pug para ser transpilados a html */
         PUG: './app/src/templates/*.pug',
+        /** Todos pug para ser transpilados a html */
+        PUG_SHARED: './app/src/templates/**/*.pug',
         /** Todos los js propios desarrollados por mi */
         BUNDLEJS: './app/src/scripts/*.js',
         /** Todos los js propios desarrollados por mi */
         VENDORJS: './app/src/scripts/vendors/*.js',
         /** El fichero pirncipal que incluye todos los SCSS para transpilarlos a CSS */
         STYLE: './app/src/styles/main.scss',
-        /** Todos los archivos SCSS */
-        SCSS: '/app/src/styles/**',
+        /** Todos los archivos SCSS que cuelgan del main.scss */
+        SCSS: './app/src/styles/**/*.scss',
         /** Todos los assets que se quieren añadir */
         ASSETS: [ './app/assets/**' ]
     },

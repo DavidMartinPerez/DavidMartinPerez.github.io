@@ -1,0 +1,16 @@
+.scroll {
+    width: 20px;
+    height: 35px;
+    border: 2px solid $white;
+    border-radius: 15px;
+    position: relative;
+    &::before {
+        content: 'o';
+        display: block;
+        color: #fdfdfd;
+        position: absolute;
+        bottom: 1px;
+        left: 25%;
+        animation: scroll-rote 1.5s infinite linear;
+    }
+}

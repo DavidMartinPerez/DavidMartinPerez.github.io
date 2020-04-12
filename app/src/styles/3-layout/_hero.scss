@@ -1,0 +1,76 @@
+.hero {
+    display: flex;
+    background-color: $black;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,0.2);
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    &__about {
+        position: absolute;
+        margin-top: 63px;
+        left: 32px;
+        text-shadow: 4px 4px 4px $black;
+        &--title {
+            font-size: 48px;
+            line-height: 56px;
+            color: $white;
+            p:nth-child(1) {
+                font-size: 24px;
+                line-height: 36px;
+            }
+            p:nth-child(3) {
+                font-size: 32px;
+            }
+        }
+        @include responsive(desktop-mini) {
+            position: relative;
+            margin-top: 0px;
+            left: 0px;
+        }
+    }
+    &__img {
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__scroll {
+        position: absolute;
+        bottom: 25px;
+    }
+    &__icons {
+        height: 110px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 18px;
+        left: 32px;
+        bottom: 32px;
+        a,a:visited, a:active, a:focus {
+            color: $white;
+        }
+        a.linkedin {
+            &:hover {
+                color: #0073b1;
+            }
+        }
+        a.twitter {
+            &:hover {
+                color: #1da1f2;
+            }
+        }
+        a.codepen, a.github {
+            &:hover {
+                color: lightcoral;
+            }
+        }
+        a.github {
+            &:hover {
+                color: lightcyan;
+            }
+        }
+    }
+}

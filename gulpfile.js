@@ -54,8 +54,10 @@ function assets() {
 
 function watchFiles() {
     watch([CONFIG.SRC.PUG], () => html());
-    watch([CONFIG.SRC.SCRIPT], () => js());
-    watch([`${CONFIG.SRC.SCSS}`], () => css());
+    watch([CONFIG.SRC.PUG_SHARED], () => html());
+    watch([CONFIG.SRC.BUNDLEJS], () => js());
+    watch([CONFIG.SRC.STYLE], () => css());
+    watch([CONFIG.SRC.SCSS], () => css());
 }
 
 exports.js = js;

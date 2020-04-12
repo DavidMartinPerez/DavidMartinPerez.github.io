@@ -1,0 +1,15 @@
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    &--bar {
+        height: 2px;
+        background-color: $white;
+        border-radius: 20px;
+        &:nth-child(2) {
+            width: 17.5px;
+        }
+    }
+}
