@@ -56,15 +56,15 @@ const CONFIG = {
 /** configuración de url, variables de PUG */
 const CONFIG_PUG = {
     /** Url del style para el index.html */
-    STYLE: `${CONFIG.ENTORNO}${CONFIG.DIST.CSS}${STYLE_UUID}`,
+    STYLE: `./${CONFIG.ENTORNO}${CONFIG.DIST.CSS}${STYLE_UUID}`,
     /** Url del javascript propio para el index.html */
-    BUNDLEJS: `${CONFIG.ENTORNO}${CONFIG.DIST.SCRIPT}${BUNDLEJS_UUID}`,
+    BUNDLEJS: `./${CONFIG.ENTORNO}${CONFIG.DIST.SCRIPT}${BUNDLEJS_UUID}`,
     /** Url del javascript de terceros para el index.html */
-    VENDORJS: `${CONFIG.ENTORNO}${CONFIG.DIST.SCRIPT}${VENDORJS_UUID}`,
+    VENDORJS: `./${CONFIG.ENTORNO}${CONFIG.DIST.SCRIPT}${VENDORJS_UUID}`,
     /** Url del css que importa la fuente para el index.html */
-    FIRACODE: `${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}font/fira-code/fira_code.css`,
+    FIRACODE: `./${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}font/fira-code/fira_code.css`,
     //** Url del favicon de la web */
-    FAVICON: `${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}img/favicon.ico`
+    FAVICON: `./${CONFIG.ENTORNO}${CONFIG.DIST.ASSETS}img/favicon.ico`
 }
 
 module.exports = {
