@@ -1,3 +1,20 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+section {
+    margin-top: 80px !important;
+    margin-bottom: 80px  !important;
+}
+
+.wrapper {
+    padding: 0 60px;
+
+    @include responsive(desktop-mini) {
+        padding: 0 200px;
+    }
 }

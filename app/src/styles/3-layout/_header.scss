@@ -10,7 +10,7 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 0 30px;
-        @include responsive(mini-desktop) {
+        @include responsive(desktop-mini) {
             padding: 0 60px;
         }
         &--logo {
@@ -29,7 +29,7 @@ header {
             }
         }
         &--navigation-items {
-            display: none
+            display: none;
         }
         &--menu-toggle {
             cursor: pointer;

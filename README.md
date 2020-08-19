@@ -2,7 +2,7 @@
 
 
 ## Versión single page
-~STACK~
+*STACK*
 * SCSS -> CSS
 * PUG -> template html
 * GULP -> para generar los dist, compilar el scss y el pug

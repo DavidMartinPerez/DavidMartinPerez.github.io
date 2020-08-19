@@ -3,13 +3,13 @@ doctype
 html(lang='es-Es')
     head
         include ./shared/head-tag
-        title David Martin Perez - Web Personal
     body
         include ./shared/header
-        main.wrapper
-            include ./shared/hero
-            //- include ./shared/proyects
+        main
+            include ./layout/hero
+            include ./layout/bio
+            //- include ./layout/proyects
 
-        //- include ./shared/footer
+        include ./shared/footer
         script(src=VENDORJS)
         script(src=BUNDLEJS)
