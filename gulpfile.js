@@ -52,6 +52,12 @@ function assets() {
         .pipe(dest(`./${CONFIG.DIST.FOLDER}${CONFIG.DIST.ASSETS}`));
 }
 
+/** funcion que se encarga de copiar todos los archivos necesarios para seo */
+function configSeo() {
+    return src(CONFIG.SRC.SEO)
+        .pipe(dest(`./${CONFIG.DIST.FOLDER}`));
+}
+
 function watchFiles() {
     watch([CONFIG.SRC.PUG], () => html());
     watch([CONFIG.SRC.PUG_SHARED], () => html());
@@ -65,5 +71,6 @@ exports.css = css;
 exports.html = html;
 exports.cleanAll = cleanAll;
 exports.assets = assets;
+exports.configSeo = configSeo;
 exports.watch = watchFiles;
-exports.default = series(cleanAll, parallel(html, css, js, assets));
+exports.default = series(cleanAll, parallel(html, css, js, assets, configSeo));

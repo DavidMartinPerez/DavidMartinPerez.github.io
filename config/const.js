@@ -35,7 +35,9 @@ const CONFIG = {
         /** Todos los archivos SCSS que cuelgan del main.scss */
         SCSS: './app/src/styles/**/*.scss',
         /** Todos los assets que se quieren añadir */
-        ASSETS: [ './app/assets/**' ]
+        ASSETS: [ './app/assets/**' ],
+        /** Todos las configuraciones de la web para indexar en google */
+        SEO: [ './config_seo/**' ],
     },
 
     /** URL PARA LA CARPETA DISTRIBUIDORA DE LOS ARCHIVOS CONTRIBUIDOS */
