@@ -1,1 +1,14 @@
-p ¿Dónde estoy?
+doctype
+html(lang='es-Es')
+    head
+        include ./shared/head-tag-404
+    body.v404
+        include ./shared/header-within-menu
+        main
+            .v404_page
+                p Esta página no existe :(
+                a(href="https://davidmartinperez.github.io/") Vuelve a la página principal.
+
+        include ./shared/footer
+        script(src=VENDORJS)
+        script(src=BUNDLEJS)

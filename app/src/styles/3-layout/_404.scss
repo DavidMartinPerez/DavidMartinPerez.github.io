@@ -1,0 +1,19 @@
+.v404 {
+    background: black;
+    &_page {
+        color: #fff;
+        height: calc(100vh - 75px );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            margin-top: 30px;
+            color: #fff;
+        }
+    }
+    .footer {
+        color: #fff;
+    }
+}
