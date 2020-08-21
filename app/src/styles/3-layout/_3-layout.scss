@@ -3,4 +3,16 @@
 @import 'hero';
 @import 'proyects';
 @import 'bio';
-@import '404';
+
+//Temporal
+.temporal {
+    &--links {
+        display: flex;
+        justify-content: space-around;
+        font-size: 24px;
+    }
+    &--title {
+        text-align: center;
+        font-size: 32px;
+    }
+}

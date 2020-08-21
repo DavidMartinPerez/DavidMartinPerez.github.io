@@ -13,6 +13,9 @@ header {
         @include responsive(desktop-mini) {
             padding: 0 60px;
         }
+        &--menu {
+            position: relative;
+        }
         &--logo {
             height: 32px;
         }
@@ -28,11 +31,29 @@ header {
                 font-size: 28px;
             }
         }
-        &--navigation-items {
-            display: none;
-        }
         &--menu-toggle {
             cursor: pointer;
+            &--checkbox {
+                display: none;
+            }
+        }
+        &--navigation-items {
+            display: none;
+                * {
+                    color: #fff;
+                }
+            position: absolute;
+            justify-content: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            padding: 15px 0;
+            right: 35px;
         }
     }
+}
+
+// Event menu desplegable
+.header--menu-toggle--checkbox:checked+.header--navigation-items {
+    display: flex;
 }

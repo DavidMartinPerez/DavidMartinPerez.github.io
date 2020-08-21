@@ -1,12 +1,14 @@
 header
     .header
         a.header--link(href="/") D#[span avid] M#[span artín]
-        .header--menu-toggle(role="button")
-            .nav-toggle
-                .nav-toggle--bar
-                .nav-toggle--bar
-                .nav-toggle--bar
-        .header--navigation-items
-            ul.header--navigation-list
-                li.header--navigation-item
-                    a(href="#sobreDavidMartin") Sobre mi
+        nav.header-menu
+            label.header--menu-toggle(role="button" for="menu-toggle")
+                .nav-toggle
+                    .nav-toggle--bar
+                    .nav-toggle--bar
+                    .nav-toggle--bar
+            input(type="checkbox" class="header--menu-toggle--checkbox" id="menu-toggle")
+            .header--navigation-items
+                ul.header--navigation-list
+                    li.header--navigation-item
+                        a(href="#sobreDavidMartin") Sobre mi

@@ -12,9 +12,23 @@ section {
 }
 
 .wrapper {
-    padding: 0 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    max-width: calc(100% - 2.4rem);
 
+    @include responsive(phone) {
+        max-width: 1000px;
+    }
+    @include responsive(tab) {
+        max-width: 1000px;
+    }
     @include responsive(desktop-mini) {
-        padding: 0 200px;
+        max-width: 990px;
+    }
+    @include responsive(desktop) {
+        max-width: 768px;
     }
 }
+
