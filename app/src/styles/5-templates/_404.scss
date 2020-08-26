@@ -1,7 +1,7 @@
 .v404 {
     background: black;
     &_page {
-        color: #fff;
+        color: var(--second);
         height: calc(100vh - 75px );
         display: flex;
         flex-direction: column;
@@ -10,10 +10,10 @@
 
         a {
             margin-top: 30px;
-            color: #fff;
+            color: var(--second);
         }
     }
     .footer {
-        color: #fff;
+        color: var(--second);
     }
 }

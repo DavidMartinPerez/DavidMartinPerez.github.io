@@ -1,13 +1,20 @@
-// Paleta de colores pastel
-$white: #FDFDFD;
-// $black: #121316;
-$black: #0a0001;
-$grey: #767a7d;
-$red: #ffabab;
+// la paleta esta pensada para tener 3 colores, dos predominantes y uno para acompañar
+$first: #0a0001;
+$second: #F0FAF2;
+$third: #ACE2E3;
 
-$pink: #E8AEA7;
-$darkpink: #D78275;
-$purple: #936183;
-$breis: #EEC49D;
-$lightpink: #F2CDD7;
-$lighgrey: #D0b5b8;
+//TODO: Habilitar un modo noche y un modo día para alternal, var(--first) por var(--second) y cambiar la imagen de perfil a algo más blanco
+
+$red: #ffabab;
+$transparent: transparent;
+
+
+// themes
+[data-theme="light"] {
+    --first: #0a0001;
+    --second: #F0FAF2;
+}
+[data-theme="dark"] {
+    --first: #F0FAF2;
+    --second: #0a0001;
+}

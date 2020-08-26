@@ -1,13 +1,13 @@
 .scroll {
     width: 20px;
     height: 35px;
-    border: 2px solid $white;
+    border: 2px solid $second;
     border-radius: 15px;
     position: relative;
     &::before {
         content: 'o';
         display: block;
-        color: #fdfdfd;
+        color: $second;
         position: absolute;
         bottom: 1px;
         left: 25%;

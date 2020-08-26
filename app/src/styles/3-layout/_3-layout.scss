@@ -1,8 +1,13 @@
 @import 'footer';
 @import 'header';
 @import 'hero';
-@import 'proyects';
+@import 'portfolio';
 @import 'bio';
+@import 'quick_bio';
+@import 'experience';
+@import 'skills';
+@import 'contact';
+@import 'interesting';
 
 //Temporal
 .temporal {
@@ -12,7 +17,6 @@
         font-size: 24px;
     }
     &--title {
-        text-align: center;
-        font-size: 32px;
+        @extend %title;
     }
 }

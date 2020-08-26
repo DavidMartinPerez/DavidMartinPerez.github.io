@@ -1,11 +1,8 @@
-.bio {
+.skills {
     &__title {
         @extend %title;
     }
     &__description {
         @extend %description;
-        p:nth-child(1) {
-                margin-top: 0;
-        }
     }
 }

@@ -1,19 +1,13 @@
 .proyect {
-    margin: 40px 0;
     &--title {
-        font-family: 'Euphoria Script', cursive;
-        text-align: center;
-        text-decoration: none;
-        font-size: 56px;
-        font-weight: 600;
-        color: $black;
-        margin-bottom: 15px;
+        @extend %title;
     }
     &--description {
-        text-align: center;
-        margin-bottom: 25px;
+        @extend %description;
+        text-align:center;
     }
     &__list {
+        margin-top: 15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -40,7 +34,7 @@
                 height: 96%;
                 padding: 0 5px;
                 z-index: 10;
-                color: $white;
+                color: var(--second);
                 font-size: 12px;
                 background: rgba(51, 51, 51, 0.808);
                 // &:hover {
@@ -70,7 +64,7 @@
 
                     .stack {
                         border-radius: 15px;
-                        border: 1px solid $white;
+                        border: 1px solid var(--second);
                         padding: 0 5px;
                         margin-right: 5px;
                         margin-bottom: 5px;

@@ -1,9 +1,37 @@
+@import url('../assets/font/fira-code/fira_code.css');
+
 body {
-    font-family: 'Poppins', sans-serif;
-    font-family: 'The Girl Next Door', cursive;
-    font-family: 'Euphoria Script', cursive;
-    font-family: 'Merienda', cursive !important;
+    font-family: 'Fira Code';
     font-weight: 400;
     font-size: 16px;
+    line-height: 48px;
     line-height: 28px;
+}
+
+%font-merienda {
+    font-family: 'Merienda', cursive;
+}
+
+%font-euphoria-script {
+    font-family: 'Euphoria Script', cursive;
+}
+
+%title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 48px;
+    text-decoration: underline $third;
+    margin-bottom: 40px;
+}
+
+%description {
+    font-size: 18px;
+    line-height: 24px;
+    p {
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+        margin-top: 15px;
+    }
 }
