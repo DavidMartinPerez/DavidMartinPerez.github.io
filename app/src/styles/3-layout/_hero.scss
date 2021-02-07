@@ -52,30 +52,30 @@ section.hero {
         position: absolute;
         bottom: 25px;
     }
-    &__icons {
+    &__social {
         position: absolute;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         font-size: 24px;
         right: 32px;
         bottom: 32px;
-        li {
-            width: 48px;
-            height: 48px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        a {
-            transition: all 0.3s;
-        }
-        a,a:visited, a:active, a:focus {
-            color: $second;
-        }
-        a:hover {
-            color: $third;
-            transform: scale(1.15);
+        &--icons {
+            li {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a {
+                transition: all 0.3s;
+            }
+            a,a:visited, a:active, a:focus {
+                color: $second;
+            }
+            a:hover {
+                color: $third;
+                transform: scale(1.15);
+            }
         }
     }
 }
