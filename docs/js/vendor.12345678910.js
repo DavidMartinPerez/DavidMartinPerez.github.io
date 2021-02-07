@@ -1,0 +1,2 @@
+console.log('vendor cargado correctamente')
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZlbmRvcnMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoidmVuZG9yLjEyMzQ1Njc4OTEwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiY29uc29sZS5sb2coJ3ZlbmRvciBjYXJnYWRvIGNvcnJlY3RhbWVudGUnKSJdfQ==
