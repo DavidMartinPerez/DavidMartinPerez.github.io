@@ -10,7 +10,7 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 0 30px;
-        @include responsive(desktop-mini) {
+        @include responsive(desktop) {
             padding: 0 60px;
         }
         &--menu {
@@ -22,7 +22,7 @@ header {
         &--link {
             @extend %font-euphoria-script;
             text-decoration: none;
-            font-size: 36px;
+            font-size: 2.25em;
             font-weight: 600;
             color: $second;
             transition: 0.3s;

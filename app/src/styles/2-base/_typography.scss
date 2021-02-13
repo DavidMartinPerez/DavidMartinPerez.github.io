@@ -4,8 +4,7 @@ body {
     font-family: 'Fira Code';
     font-weight: 400;
     font-size: 16px;
-    line-height: 48px;
-    line-height: 28px;
+    line-height: 2em;
 }
 
 %font-merienda {
@@ -17,17 +16,20 @@ body {
 }
 
 %title {
-    text-align: center;
-    font-size: 48px;
+    font-size: 1.4em;
     font-weight: bold;
-    line-height: 48px;
+    line-height: 1.5em;
     text-decoration: underline $third;
     margin-bottom: 40px;
+    @include responsive(desktop) {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
 }
 
 %description {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1em;
+    line-height: 2em;
     p {
         &:nth-child(1) {
             margin-top: 0;

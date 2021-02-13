@@ -26,9 +26,6 @@ section:not(.hero) {
     @include responsive(tab) {
         max-width: 1000px;
     }
-    @include responsive(desktop-mini) {
-        max-width: 990px;
-    }
     @include responsive(desktop) {
         max-width: 768px;
     }
