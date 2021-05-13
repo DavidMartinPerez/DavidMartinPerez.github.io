@@ -43,7 +43,7 @@ const CONFIG = {
     /** URL PARA LA CARPETA DISTRIBUIDORA DE LOS ARCHIVOS CONTRIBUIDOS */
     DIST : {
         /** Carpeta en distribuidora distribuidora */
-        FOLDER : 'docs/',
+        FOLDER : 'dist/',
         /** Carpeta en distribuidora donde se encuentra en JS concatenado de todos */
         SCRIPT : 'js/',
         /** Carpeta en distribuidora donde se encuentra el CSS transpilado del SCSS */

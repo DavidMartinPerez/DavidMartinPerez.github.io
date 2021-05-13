@@ -60,3 +60,16 @@ Roapmap de la página web, la clave es hacer una misma página que contenga la m
 3. Experiencia - Experiencia laboral detallada con todo tipo de tareas realizadas + CV enlace y view
 
 4. Estudios - Estudios detallados y cursos realizados, potencias
+
+
+# SEO Keys
+David ->
+David Martin ->
+David Martin Perez ->
+David Frontend ->
+David Martin Front-end ->
+David Desarrollador ->
+David Malaga ->
+David Martin Angular ->
+
+Web para evaluar esto -> https://app.neilpatel.com/es/ubersuggest/overview?keyword=david%20martin%20p&locId=2724&lang=es
