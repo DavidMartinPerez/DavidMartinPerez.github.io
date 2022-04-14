@@ -1,26 +1,12 @@
-include ./shared/variables
 doctype
 html(lang='es-Es')
     head
         include ./shared/head-tag
     body(data-theme="light")
-        include ./shared/header-within-menu
-        main
-            include ./layout/hero
-            //- include ./layout/quick_bio
-            //- include ./layout/skills
-            //- include ./layout/portfolio
-            //- include ./layout/bio
-            //- include ./layout/experience
-            //- include ./layout/contact
-            //- include ./layout/interesting
-            //- include ./layout/temporal
-            include ./shared/switch_theme
-
-        //- include ./shared/footer
-        //- script(src=VENDORJS) //No utilizado por ahora
-        //- script(src=BUNDLEJS)
-        //- TODO: ELIminar iconos, hacerlos con css y hacer al final de la web para añadir gusto :-)
+        include ./shared/header
+        main.
+            David Martin
+        include ./shared/footer
         //- script.
         //-     document.getElementById('switch-theme').addEventListener('change', (event) => {
         //-         document.body.removeAttribute('data-theme'); //Eliminamos el atributto para añadir despues el necesario
