@@ -2,10 +2,14 @@ doctype
 html(lang='es-Es')
     head
         include ./shared/head-tag
-    body(data-theme="light")
+    body(data-theme="dark")
         include ./shared/header
         main
-            .title David Martin
+            include ./layout/welcome
+            include ./layout/bio
+            include ./layout/experience
+            include ./layout/portfolio
+            include ./layout/education
         include ./shared/footer
         //- script.
         //-     document.getElementById('switch-theme').addEventListener('change', (event) => {

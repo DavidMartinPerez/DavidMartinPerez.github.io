@@ -39,4 +39,8 @@ Bienvenidos a mi página personal, a continuación te explicare como he montado 
 # Github Actions que utilizo
 # Guia de estilos y colores, inspiraciones
 
+* Mobile first
+* Gradient Design
+* Glassmorphism
+
 # Estructura de la web

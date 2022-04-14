@@ -1,3 +1,21 @@
+:root {
+    //Color para fuentes:
+    --magenta: #f21361;
+    --lightgreen: #6fee8d;
+    --darkpink: #ff1cf7;
+    --intesiveblue: #01cfea;
+    --intesiveorange: #f36534;
+
+    //Color para completar el gradiente:
+    --purple: #b249f8;
+    --lightblue: #64b8fb;
+    --blue: #00b7fa;
+    --darkblue: #0070f3;
+    --lightorange: #f69f27;
+    --green: #17c964;
+    --pink: #ff4ecd;
+}
+
 // themes
 [data-theme="light"] {
     --first: #ffffff;
@@ -20,8 +38,58 @@ body {
     background: var(--first);
     color: var(--second);
 }
+
+
+// MIXIN GRADIENTS para fuentes
+@mixin gradientIntensivePurple() {
+    background: -webkit-linear-gradient(
+        var(--darkpink) 25%,
+        var(--purple) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--purple);
+}
+
+@mixin gradientIntensiveBlue() {
+    background: -webkit-linear-gradient(180deg, var(--lightblue) 25%, var(--darkblue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--darkblue);
+}
+
+@mixin gradientLightBlue() {
+    background: -webkit-linear-gradient(var(--blue) 25%, var(--intesiveblue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--intesiveblue);
+}
+
+@mixin gradientIntensiveOrange() {
+    background: -webkit-linear-gradient(var(--intesiveorange) 25%, var(--lightorange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--lightorange);
+}
+
+@mixin gradientIntensiveGreen() {
+    background: -webkit-linear-gradient(var(--lightgreen) 25%, var(--green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--green);
+}
+
+@mixin gradientIntensiveMagenta() {
+    background: -webkit-linear-gradient(var(--pink) 25%, var(--magenta) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--magenta);
+}
+
+
 .title{
     font-size: 72px;
     line-height: 1.4em;
-    @include gradientPinkPurple();
+    font-weight: 700;
+    @include gradientIntensiveMagenta();
 }

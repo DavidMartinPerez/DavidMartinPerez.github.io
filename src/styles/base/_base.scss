@@ -6,21 +6,32 @@ body {
     overflow-x: hidden;
 }
 
-.wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    max-width: calc(100% - 2.4rem);
-
-    @include responsive(phone) {
-        max-width: 1000px;
-    }
-    @include responsive(tab) {
-        max-width: 1000px;
-    }
-    @include responsive(desktop) {
-        max-width: 768px;
+section {
+    min-height: 100vh;
+    //TODO: Prueba
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 72px;
+        font-weight: 700;
+        @include gradientIntensiveMagenta();
+        line-height: 1.4em;
     }
 }
 
+%wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 2.4em;
+    padding-right: 2.4em;
+    max-width: calc(100% - 2.4em);
+
+    @include responsive(desktop) {
+        max-width: calc(100% - 2.4em);
+    }
+}
+
+.wrapper {
+    @extend %wrapper;
+}
