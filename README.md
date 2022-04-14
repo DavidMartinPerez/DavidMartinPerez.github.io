@@ -1,75 +1,42 @@
 # DavidMartinPerez.github.io
 
+Bienvenidos a mi página personal, a continuación te explicare como he montado este sitio :-D
 
-## Versión single page
-*STACK*
-* SCSS -> CSS
-* PUG -> template html
-* GULP -> para generar los dist, compilar el scss y el pug
-* FONT -> fire-code
+## Stack
 
+* [Sccs](https://sass-lang.com/)
+* [Pug](https://pugjs.org/api/getting-started.html) -> Template Html
 
-Arquitectura:
+## Metodologías
+* [BEM](http://getbem.com/) para las clases estilos y reutilización de SCSS
+//TODO: Mejor explicación
+    * Bloque es la < contenedora > .block
+    * Elemento son las < hijas > de la < contenedora > .block__element
+    * Modificador son < hijos > con propiedades diferentes .block__element--modifier
+* Kebab Case (kebab-case)
+## Arquitectura
+* [7-1 Scss](https://sass-guidelin.es/#the-7-1-pattern) la arquitectura que he utilizado para mis estilos
+    * base/
+        * Contiene todo lo relacionado con la base de la página, reset, tipografias, incluso animaciones.
+    * abstracts/
+        * Contiene todo lo relacionado con utilidades de SCSS, funciones, mixin, variables... Esto no se propagará cuando se compile la aplicación.
+    * components/
+        * Contiene pequeños bloques de códigos que se pueden reutilizar, por ejemplo: botones, enlaces...
+    * layout/
+        * Contiene todo lo relacionado con las estructuras/bloques principales de la página, por ejemplo: header, footer, paneles grids.
+    * pages/
+        * Contiene estilos pertenecientes a cada página de la web, en este caso como es solo una landing page no habrá varias.
 
-- app
-    - assets <- Contiene todos los assets img, fuentes, iconos
-        - fonts, img, ect.
-    - src
-        - scripts <- Toda la logica de javascript
-            - vendors <- scripts de terceros
-                - js
-            - main.js, otros scripts <- scripts propios
-        - styles < - estilos en archivos scss
-            - 0-plugins -> Vendor - scss de terceros
-            - 1-helpers -> Funciones, mixins, variables...
-            - 2-base -> Estilos globales, reseteo de estilos, tipografias
-            - 3-layout -> bloques grandes de html, sections, footer, navbar, header
-            - 4-modules -> Diseños de componentes, botones, columnas, listas
-            - 5-templates -> Diseños especificos de una vista, index/home, contactos...
-            - style.scss <- archivo principal que reune todos los demas
-        - templates <- todas las templates pug
-            - components <- componentes comunes
-                - header, navbar, footer, etc
-            - views (index, html) <- documentos html que serán vistas
-
-TODO: 's:
-1. Cambiar esta arquitectura por una arquitectura 7-1-pattern example: https://gist.github.com/rveitch/84cea9650092119527bc
-
-
-Roapmap concept:
-Roapmap de la página web, la clave es hacer una misma página que contenga la mayor fuente de información, pero sin saturar, por ejemplo info personal + 6 proyectos con más renombre y un enlace a todos + experiencia con más renombre y un enlace a toda la experiencia + estudios principales / cursos titulaciones principal y un enlace a todos + contacto
-
-1. Home (Esta tendrá información sobre mi)
-    - Info sobre mi + mas foto
-    - enlace a curriculum
-    - skills y preferencias
-    - 6 proyectos con más renombre (con unas cartitas con explicación + foto`) + enlace a todos los proyectos
-    - Experiencia laboral con más renombre + un boton que muestre otra vista con toda la información bien detallada
-    - Estudios + cursos realizados y un boton que muestre más en detalle todo eso
-    - contacto
-
-2. Proyectos - TODO: Evaluar si usar una base de datos para guardar proyectos + info + enlaces ó hacerlos con atributos ej: data-tecnologias="css, js, angular, etc"
-    - Cartas con proyectos
-        - info y foto
-        - boton con más detalle que despliega un popup
-        - Iconos de tecnologias
-        - Enlaces a los proyectos
-        - enlace a repositorio
-    - Filtro según tecnologias
-
-3. Experiencia - Experiencia laboral detallada con todo tipo de tareas realizadas + CV enlace y view
-
-4. Estudios - Estudios detallados y cursos realizados, potencias
+* Arquitectura para las plantillas html:
+    * Layout/
+        - Contiene todo lo relacionado con las estructuras/bloques principales de la página.
+    * Components/
+        - Contiene componentes reutilizables.
+    * pages
 
 
-# SEO Keys
-David ->
-David Martin ->
-David Martin Perez ->
-David Frontend ->
-David Martin Front-end ->
-David Desarrollador ->
-David Malaga ->
-David Martin Angular ->
+# Utilización del package.json para la generación de la carpeta dist
+# Github Actions que utilizo
+# Guia de estilos y colores, inspiraciones
 
-Web para evaluar esto -> https://app.neilpatel.com/es/ubersuggest/overview?keyword=david%20martin%20p&locId=2724&lang=es
+# Estructura de la web

@@ -1,0 +1,79 @@
+section.hero {
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 1;
+}
+.hero {
+    color: $second;
+    background-color: $first;
+    @extend %font-merienda;
+    display: flex;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,0.2);
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    &__about {
+        position: absolute;
+        top: 50%;
+        text-shadow: 4px 4px 4px $first;
+        &--title {
+            line-height: 56px;
+            color: $second;
+            p:nth-child(1) {
+                text-align: center;
+                font-size: 2em;
+            }
+            p:nth-child(2) {
+                font-size: 1.5em;
+                text-align: center;
+                color: $third;
+            }
+        }
+        @include responsive(tab) {
+            position: relative;
+            margin-top: 0px;
+            left: 7%;
+            top: 0%;
+            font-size: 24px;
+        }
+    }
+    &__img {
+        height: 100%;
+        img {
+            height: 100vh;
+            width: auto;
+            object-fit: cover;
+        }
+    }
+    &__scroll {
+        position: absolute;
+        bottom: 25px;
+    }
+    &__social {
+        position: absolute;
+        display: flex;
+        font-size: 24px;
+        right: 32px;
+        bottom: 32px;
+        &--icons {
+            li {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a {
+                transition: all 0.3s;
+            }
+            a,a:visited, a:active, a:focus {
+                color: $second;
+            }
+            a:hover {
+                color: $third;
+                transform: scale(1.15);
+            }
+        }
+    }
+}

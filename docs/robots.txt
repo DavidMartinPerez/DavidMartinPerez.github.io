@@ -1,4 +1,0 @@
-Sitemap: https://davidmartinperez.github.io/sitemap.xml
-
-User-Agent: *
-Allow: /

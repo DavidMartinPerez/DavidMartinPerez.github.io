@@ -1,0 +1,43 @@
+/** Vendor - scss de terceros */
+@charset "UTF-8";
+
+// Configuration and helpers
+@import
+    'abstracts/variables',
+    'abstracts/functions',
+    'abstracts/mixins',
+    'abstracts/colors',
+    'abstracts/animations';
+
+// Base stuff
+@import
+    'base/base',
+    'base/reset', //TODO: Cambiarlo por reset.pro
+    'base/typography';
+
+// Components
+@import
+    'components/nav-toggle',
+    'components/scroll',
+    'components/switch_theme',
+    'components/icons';
+
+// Layout-related sections
+@import
+    'layout/footer',
+    'layout/header',
+    'layout/hero',
+    'layout/portfolio',
+    'layout/bio',
+    'layout/quick_bio',
+    'layout/experience',
+    'layout/skills',
+    'layout/contact',
+    'layout/interesting';
+
+
+
+// Page-specific styles
+@import
+    'pages/home',
+    'pages/404';
