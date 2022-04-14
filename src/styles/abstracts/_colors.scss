@@ -1,13 +1,27 @@
-// la paleta esta pensada para tener 3 colores, dos predominantes y uno para acompañar
-
-
-
 // themes
 [data-theme="light"] {
-    --first: #0a0001;
-    --second: #F0FAF2;
+    --first: #ffffff;
+    --second: #000101;
 }
 [data-theme="dark"] {
-    --first: #F0FAF2;
-    --second: #0a0001;
+    --first: #000101;
+    --second: #ffffff;
+}
+
+/* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--first: #000101;
+        --second: #ffffff;
+	}
+}
+
+body {
+    background: var(--first);
+    color: var(--second);
+}
+.title{
+    font-size: 72px;
+    line-height: 1.4em;
+    @include gradientPinkPurple();
 }

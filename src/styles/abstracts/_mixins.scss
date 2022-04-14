@@ -12,3 +12,32 @@
         @media (min-width: 1400px) { @content; }
     }
 }
+
+
+@mixin gradientPinkPurple() {
+    background: -webkit-linear-gradient(rgb(255, 28, 247) 25%,rgb(178, 73, 248) 25%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(178, 73, 248);
+}
+
+@mixin gradientIntensiveBlue() {
+    background: -webkit-linear-gradient(180deg, rgb(100,184,251) 25%, rgb(0,112,243) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(178, 73, 248);
+}
+
+@mixin gradientLightBlue() {
+    background: -webkit-linear-gradient(rgb(0, 183, 250) 25%, rgb(1, 207, 234) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(178, 73, 248);
+}
+
+@mixin gradientOrange() {
+    background: -webkit-linear-gradient(rgb(243, 101, 52) 25%, rgb(246, 159, 39) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(178, 73, 248);
+}
