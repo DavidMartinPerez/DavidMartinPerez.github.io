@@ -1,0 +1,6 @@
+.education {
+    &__title {
+        @extend %title;
+        @include gradientIntensiveOrange();
+    }
+}

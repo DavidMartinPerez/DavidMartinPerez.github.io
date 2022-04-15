@@ -1,0 +1,7 @@
+.experience {
+    &__title {
+        @extend %title;
+        @include gradientLightBlue();
+    }
+
+}

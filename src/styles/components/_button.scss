@@ -1,0 +1,73 @@
+@mixin shadowButton($color) {
+    background-color: var($color);
+    box-shadow: 0 2px 18px 0 var($color);
+}
+
+@mixin borderButton($color) {
+    background: transparent;
+    font-weight: 700;
+    border: 2px solid var($color);
+    color: var($color);
+}
+
+.button {
+    padding: 0 20px;
+    border-radius: 8px;
+    width: auto;
+    min-width: 5em;
+    text-align: center;
+    color: var(--second);
+    font-size: 1em;
+    line-height: 2.4em;
+
+    &--magenta {
+        @include shadowButton(--magenta);
+    }
+
+    &--blue {
+        @include shadowButton(--darkblue);
+    }
+
+    &--purple {
+        @include shadowButton(--purple);
+    }
+
+    &--green {
+        @include shadowButton(--green);
+    }
+
+    &--lightorange {
+        @include shadowButton(--lightorange);
+    }
+
+    &--darkpink {
+        @include shadowButton(--darkpink);
+    }
+
+
+    &--second {
+        &-magenta {
+            @include borderButton(--magenta);
+        }
+
+        &-blue {
+            @include borderButton(--darkblue);
+        }
+
+        &-purple {
+            @include borderButton(--purple);
+        }
+
+        &-green {
+            @include borderButton(--green);
+        }
+
+        &-lightorange {
+            @include borderButton(--lightorange);
+        }
+
+        &-darkpink {
+            @include borderButton(--darkpink);
+        }
+    }
+}

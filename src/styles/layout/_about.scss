@@ -1,0 +1,7 @@
+.about {
+    &__title {
+        @extend %title;
+        @include gradientIntensiveGreen();
+    }
+
+}

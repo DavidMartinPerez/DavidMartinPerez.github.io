@@ -17,10 +17,17 @@
 
 // Components
 @import
-    'components/header';
+    'components/header',
+    'components/button',
+    'components/footer';
 
 // Layout-related sections
-
+@import
+    'layout/about',
+    'layout/education',
+    'layout/experience',
+    'layout/portfolio',
+    'layout/hero';
 
 // Page-specific styles
 @import

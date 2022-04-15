@@ -8,19 +8,10 @@ body {
 
 section {
     min-height: 100vh;
-    //TODO: Prueba
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p {
-        font-size: 72px;
-        font-weight: 700;
-        @include gradientIntensiveMagenta();
-        line-height: 1.4em;
-    }
+    width: 100%;
 }
 
-%wrapper {
+@mixin wrapper() {
     margin-right: auto;
     margin-left: auto;
     padding-left: 2.4em;
@@ -33,5 +24,5 @@ section {
 }
 
 .wrapper {
-    @extend %wrapper;
+    @include wrapper();
 }
