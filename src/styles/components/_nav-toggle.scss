@@ -1,0 +1,26 @@
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    position: relative;
+    &--bar {
+        height: 2px;
+        background-color: var(--second);
+        border-radius: 20px;
+        &:nth-child(2) {
+            width: 17.5px;
+        }
+        transition: all 0.5s;
+    }
+    &:hover {
+        .nav-toggle--bar {
+            transform: scale(1.15);
+            background-color: var(--second);
+            &:nth-child(2) {
+                margin-left: calc( 25px - 17.5px );
+            }
+        }
+    }
+}

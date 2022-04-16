@@ -1,19 +1,18 @@
 .switch_theme {
-    position: fixed;
+    position: relative;
     cursor: pointer;
-    bottom: 25px;
-    left: 25px;
-    width: 48px;
-    height: 48px;
-    background-color: var(--first);
-    border: 2px solid var(--second);
+    top: -8px;
+    // width: 48px;
+    // height: 48px;
+    background-color: var(--second);
+    border: 2px solid var(--first);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     .icon {
-        width: 48px;
-        height: 48px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         background-color: transparent;
     }

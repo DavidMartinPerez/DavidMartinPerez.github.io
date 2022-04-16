@@ -11,8 +11,8 @@ html(lang='es-Es')
             include ./layout/experience
             include ./layout/education
         include ./shared/footer
-        //- script.
-        //-     document.getElementById('switch-theme').addEventListener('change', (event) => {
-        //-         document.body.removeAttribute('data-theme'); //Eliminamos el atributto para añadir despues el necesario
-        //-         (event.target.checked) ? document.body.setAttribute('data-theme', 'dark') : document.body.setAttribute('data-theme', 'light')
-        //-     });
+        script.
+            document.getElementById('switch-theme').addEventListener('change', (event) => {
+                document.body.removeAttribute('data-theme'); //Eliminamos el atributto para añadir despues el necesario
+                (event.target.checked) ? document.body.setAttribute('data-theme', 'light') : document.body.setAttribute('data-theme', 'dark')
+            });

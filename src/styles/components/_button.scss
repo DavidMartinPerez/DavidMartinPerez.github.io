@@ -1,6 +1,12 @@
 @mixin shadowButton($color) {
+    color: #fff;
     background-color: var($color);
-    box-shadow: 0 2px 18px 0 var($color);
+    box-shadow: 0 4px 14px 0 var($color);
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 @mixin borderButton($color) {
@@ -8,6 +14,11 @@
     font-weight: 700;
     border: 2px solid var($color);
     color: var($color);
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        @include shadowButton($color);
+    }
 }
 
 .button {

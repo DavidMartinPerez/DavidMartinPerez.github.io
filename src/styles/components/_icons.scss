@@ -3,8 +3,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 15px);
-    height: calc(100% - 15px);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
     border-radius: 50%;
     background-color: #F0FAF2;
     overflow: hidden;
@@ -122,7 +122,7 @@
       background-color: #fcd462;
       box-shadow: -5px -3px 0 0 rgba(0, 0, 0, 0.3) inset;
     }
-    
+
     .ray {
       position: absolute;
       width: 3%;

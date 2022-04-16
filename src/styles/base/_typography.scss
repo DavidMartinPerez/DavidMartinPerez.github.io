@@ -8,4 +8,8 @@
     @include responsive(desktop) {
         font-size: 3.5rem;
     }
+
+    @include responsive(big-desktop) {
+        font-size: 5rem;
+    }
 }

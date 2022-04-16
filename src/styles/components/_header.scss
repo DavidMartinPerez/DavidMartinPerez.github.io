@@ -13,82 +13,128 @@
     -webkit-backdrop-filter: blur(3px);
     border: 1px solid rgba(var(--first), 0.3);
 
-
-    &__logo{
+    .header__icons--switch {
+        @include responsive(desktop) {
+            display: none;
+        }
     }
 
-    &__menu {
-        display: none;
-        justify-content: space-between;
-        min-width: 450px;
-
-        @include responsive(desktop) {
-            display: flex;
-
-            .header__nav, .header__icons {
-                a, button {
-                    margin-left: 10px;
-                }
-            }
-        }
-
-        &--burger {
-            @include responsive(desktop) {
-                display: none;
-            }
+    &__logo{
+        img {
+            width: 32px;
+            height: 24px;
         }
     }
 
     &__nav {
-        display: flex;
-        font-weight: 500;
-
-
-        a {
-            transition: 0.5s;
-        }
-
-        &--bio {
-            &:hover {
-                color: var(--lightgreen);
+        label:not(.switch_theme), input {
+            display: none;
+            @include responsive(desktop) {
+                display: none;
             }
         }
-        &--experience {
-            &:hover {
-                color: var(--intesiveblue)
+
+        &--items {
+            display: none;
+            flex-direction: column;
+
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+
+            @include responsive(desktop) {
+                display: flex;
+                flex-direction: row;
             }
         }
-        &--education {
-            &:hover {
-                color: var(--intesiveorange)
+
+        &--navigation-list {
+            @include responsive(desktop) {
+                display: flex;
+            }
+
+            &--item {
+                @include responsive(desktop) {
+                    margin-left: 1em;
+                }
+
+                a {
+                    transition: 0.5s;
+                }
+
+                &--about {
+                    &:hover {
+                        color: var(--lightgreen);
+                    }
+                }
+                &--experience {
+                    &:hover {
+                        color: var(--intesiveblue)
+                    }
+                }
+                &--education {
+                    &:hover {
+                        color: var(--intesiveorange)
+                    }
+                }
+                &--project {
+                    &:hover {
+                        color: var(--darkpink)
+                    }
+                }
             }
         }
-        &--project {
-            &:hover {
-                color: var(--darkpink)
+
+        &--link-list {
+            display: flex;
+            justify-content: space-around;
+
+            @include responsive(desktop) {
+                justify-content: baseline;
+            }
+
+            &--item {
+                @include responsive(desktop) {
+                    margin-left: 1em;
+                }
+            }
+
+            a {
+                transition: 0.5s;
+                &:hover {
+                    color: var(--magenta);
+                }
+            }
+            .icon--github{
+                svg {
+                    width: 1.4em;
+                    height: 1.4em;
+                }
+            }
+            .icon--linkedin {
+                svg {
+                    width: 1.3em;
+                    height: 1.3em;
+                }
             }
         }
     }
+}
 
-    &__icons {
-        display: flex;
 
-        a {
-            transition: 0.5s;
-            &:hover {
-                color: var(--magenta);
-            }
-        }
-        &--linkedin{
-            svg {
-                width: 1.4em;
-                height: 1.4em;
-            }
-        }
-        &--github {
-            svg {
-                width: 1.3em;
-                height: 1.3em;
+// Event menu desplegable
+.header--menu-toggle--checkbox:checked+.header__nav--items {
+    display: flex;
+}
+
+
+[data-theme="dark"] {
+    .header {
+        &__logo {
+            img {
+                -webkit-filter: invert(100%);
+                filter: invert(100%);
             }
         }
     }
