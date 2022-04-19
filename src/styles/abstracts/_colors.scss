@@ -1,9 +1,12 @@
+$magenta: #f21361;
+$intensiveblue: #01cfea;
+
 :root {
     //Color para fuentes:
-    --magenta: #f21361;
+    --magenta: #{$magenta};
     --lightgreen: #6fee8d;
     --darkpink: #ff1cf7;
-    --intesiveblue: #01cfea;
+    --intesiveblue: #{$intensiveblue};
     --intesiveorange: #f36534;
 
     //Color para completar el gradiente:
@@ -38,7 +41,6 @@ body {
     background: var(--first);
     color: var(--second);
 }
-
 
 // MIXIN GRADIENTS para fuentes
 @mixin gradientIntensivePurple() {

@@ -10,11 +10,15 @@
         justify-content: space-around;
         min-height: 97vh;
         align-items: center;
-        @include wrapper();
+
+        padding-top: 12em;
+        margin-right: 0;
+        padding-right: 0;
     }
 
-    @include responsive(big-desktop) {
+    @include responsive(desktop) {
         justify-content: flex-end;
+        align-items: flex-start;
     }
 
     &__description, &__img {
@@ -26,12 +30,33 @@
 
     &__description {
 
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px alphaByHex(#01cfea, 33);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+        border: 0.1px solid rgba(255, 255, 255, 0.2);
+        padding: 35px;
+        z-index: 10;
+
         @include responsive(desktop) {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-evenly;
+            min-height: 350px;
+            min-width: 450px;
+            padding: 15px;
+            position: relative;
+            left: 3%;
+        }
 
-            max-width: 650px;
+        @include responsive(big-desktop) {
+            padding: 35px;
+            max-width: 800px;
+            height: 400px;
+            position: relative;
+            left: 5%;
         }
 
         &--title {
@@ -45,10 +70,20 @@
             font-size: 1.4em;
             letter-spacing: 1.5px;
             font-weight: 700;
-            color: var(--intesiveblue);
+            text-shadow:
+                -1px -1px 0 var(--intesiveblue),
+                1px -1px 0 var(--intesiveblue),
+                1px 1px 0 var(--intesiveblue),
+                -1px 1px 0 var(--intesiveblue);
+            color: var(--first);
 
             @include responsive(desktop) {
                 font-size: 2em;
+                text-shadow:
+                    -2px -2px 0 var(--intesiveblue),
+                    2px -2px 0 var(--intesiveblue),
+                    2px 2px 0 var(--intesiveblue),
+                    -2px 2px 0 var(--intesiveblue);
             }
 
             @include responsive(big-desktop) {
@@ -87,11 +122,41 @@
 
     &__img {
         align-self: center;
-        width: 50%;
+        width: 100%;
+        height: 335px;
+        margin-left: 150px;
+        margin-top: -125px;
+        background: -webkit-linear-gradient(var(--pink) 25%, var(--magenta) 100%);
+
+        @include responsive(desktop) {
+            width: 60%;
+            margin: 0;
+            height: 600px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
         img {
+            position: relative;
+            left: 50%;
+            top: -2px;
+            width: 250px;
+            z-index: 100;
             @include responsive(desktop) {
-                width: 400px;
-                margin: 0 auto;
+                position: absolute;
+                width: 600px;
+                margin: 0;
+                right: -150px;
+                left: inherit;
+                top: 2.9rem;
+            }
+            @include responsive(big-desktop) {
+                position: absolute;
+                width: 600px;
+                margin: 0;
+                left: inherit;
+                right: inherit;
+                top: 2.9rem;
             }
         }
     }
@@ -101,4 +166,96 @@
         display: none;
     }
 
+    &__background-text {
+        z-index: 1;
+        color: var(--first);
+        position: absolute;
+        font-size: 4em;
+        line-height: 1.2em;
+        @include responsive(desktop) {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            font-size: 11em;
+            line-height: 1.4em;
+        }
+        @include responsive(big-desktop) {
+            z-index: 1;
+            font-size: 12em;
+            left: 40px;
+        }
+        @include responsive(full-desktop) {
+            z-index: 10;
+            font-size: 15em;
+        }
+        &--top, &--bottom {
+            display: none;
+            @include responsive(desktop) {
+                display: block;
+            }
+        }
+
+        &--top {
+            p{
+                top: 35%;
+                @include responsive(desktop) {
+                    top: inherit;
+                }
+
+            }
+        }
+
+        &--bottom {
+            p {
+                top: 45%;
+                @include responsive(desktop) {
+                    top: 50%;
+                }
+            }
+        }
+
+        &--border {
+            text-shadow:
+                -2px -2px 0 var(--intesiveblue),
+                2px -2px 0 var(--lightgreen),
+                2px 2px 0 var(--pink),
+                -2px 2px 0 var(--intesiveblue);
+        }
+        &--wave {
+            color: var(--intesiveblue);
+            animation: wave 3s ease-in-out infinite;
+        }
+
+    }
+
 }
+
+
+@keyframes wave {
+    0%, 100% {
+      clip-path: polygon(
+        0% 47%,
+        10% 48%,
+        33% 54%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+
+    50% {
+      clip-path: polygon(0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+      );
+    }
+  }

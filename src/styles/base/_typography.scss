@@ -12,4 +12,8 @@
     @include responsive(big-desktop) {
         font-size: 5rem;
     }
+
+    @include responsive(full-desktop) {
+        font-size: 6rem;
+    }
 }
