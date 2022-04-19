@@ -1,17 +1,17 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 1.4em 2.4em;
+    padding: 1.4em 2.4em 0.5em 2.4em;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 
     //Glass effect background
     background: rgba(var(--first), 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    border: 1px solid rgba(var(--first), 0.3);
+    box-shadow: 0 4px 30px rgba(0,0,0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     .header__icons--switch {
         @include responsive(desktop) {

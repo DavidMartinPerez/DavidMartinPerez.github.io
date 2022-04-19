@@ -6,6 +6,9 @@
         @media (min-width: 960px) { @content; }
     }
     @if $breakpoint == big-desktop {
-        @media (min-width: 1328px) { @content; }
+        @media (min-width: 1400px) { @content; }
+    }
+    @if $breakpoint == full-desktop {
+        @media (min-width: 1899px) { @content; }
     }
 }
