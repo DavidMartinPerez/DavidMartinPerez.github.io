@@ -1,11 +1,14 @@
 $magenta: #f21361;
 $intensiveblue: #01cfea;
+$darkpink: #ff1cf7;
+$white: #ffffff;
+$black: #000101;
 
 :root {
     //Color para fuentes:
     --magenta: #{$magenta};
     --lightgreen: #6fee8d;
-    --darkpink: #ff1cf7;
+    --darkpink: #{$darkpink};
     --intesiveblue: #{$intensiveblue};
     --intesiveorange: #f36534;
 
@@ -21,19 +24,19 @@ $intensiveblue: #01cfea;
 
 // themes
 [data-theme="light"] {
-    --first: #ffffff;
-    --second: #000101;
+    --first: #{$white};
+    --second: #{$black};
 }
 [data-theme="dark"] {
-    --first: #000101;
-    --second: #ffffff;
+    --first: #{$black};
+    --second: #{$white};
 }
 
 /* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
 	:root {
-		--first: #000101;
-        --second: #ffffff;
+		--first: #{$black};
+        --second: #{$white};
 	}
 }
 
@@ -83,6 +86,19 @@ body {
 
 @mixin gradientIntensiveMagenta() {
     background: -webkit-linear-gradient(var(--pink) 25%, var(--magenta) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--magenta);
+}
+
+@mixin gradientMulticolor() {
+    background: -webkit-linear-gradient(
+        135deg,
+        var(--magenta),
+        var(--pink),
+        var(--pink),
+        var(--magenta)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: var(--magenta);

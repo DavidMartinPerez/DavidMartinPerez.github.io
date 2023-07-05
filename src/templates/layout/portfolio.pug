@@ -1,2 +1,53 @@
-section.portfolio
+include ../shared/project-item
+
+section.portfolio#portfolio
     h2.portfolio__title Galeria de proyectos
+    .arrow_hover
+        .text Hover
+        .curve
+        .tip
+    ul.portfolio__list
+        li
+            +project-item(
+                'dark',
+                './assets/images/reindeer-project.png',
+                'Reindeer - Modern Animation Web Design',
+                'Reinder',
+                'Maquetación de una web con diseño moderno y animaciones',
+                ['JS','GSAP','CSS','HTML'],
+                'https://github.com/DavidMartinPerez/ui-to-web/tree/master/01-reindeer',
+                'https://davidmartinperez.github.io/ui-to-web/01-reindeer/'
+            )
+        li
+            +project-item(
+                'light',
+                './assets/images/project-photographer.gif',
+                'Portfolio Fotographer - Modern Animaton Web Design',
+                'Portfolio Fotographer',
+                'Maquetación de una web con diseño moderno y animaciones',
+                ['JS','GSAP','CSS','HTML'],
+                'https://github.com/DavidMartinPerez/ui-to-web/tree/master/01-reindeer',
+                'https://davidmartinperez.github.io/ui-to-web/01-reindeer/'
+            )
+        li
+            +project-item(
+                'light',
+                './assets/images/paralax-project.png',
+                'Portfolio Fotographer - Modern Animaton Web Design',
+                'Portfolio Fotographer',
+                'Maquetación de una web con diseño moderno y animaciones',
+                ['JS','CSS','HTML'],
+                'https://davidmartinperez.github.io/moon-scroll-parallax-javascript-vanilla/',
+                'https://github.com/DavidMartinPerez/moon-scroll-parallax-javascript-vanilla'
+            )
+        li
+            +project-item(
+                'light',
+                './assets/images/social-media-project.png',
+                'Portfolio Fotographer - Modern Animaton Web Design',
+                'Portfolio Fotographer',
+                'Maquetación de una web con diseño moderno y animaciones',
+                ['CSS','HTML'],
+                'https://github.com/DavidMartinPerez/ui-to-web/tree/master/03-social-media-home',
+                'https://davidmartinperez.github.io/ui-to-web/03-social-media-home/'
+            )

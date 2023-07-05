@@ -1,7 +1,24 @@
 .experience {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+
     &__title {
         @extend %title;
         @include gradientLightBlue();
+        grid-area: 1 / 1 / 2 / 3;
     }
 
+    &__description {
+        font-size: 1.4em;
+        line-height: 1.4;
+        p {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__skills {}
 }

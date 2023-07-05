@@ -7,23 +7,34 @@ body {
     transition: all .2s ease-in-out;
 }
 
-section {
-    min-height: 100vh;
-    width: 100%;
-}
-
 @mixin wrapper() {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 2.4em;
-    padding-right: 2.4em;
-    max-width: calc(100% - 2.4em);
+    // margin-right: auto;
+    // margin-left: auto;
+    // padding-left: 2.4em;
+    // padding-right: 2.4em;
+    // max-width: calc(100% - 2.4em);
+
+    // @include responsive(desktop) {
+    //     max-width: calc(100% - 2.4em);
+    // }
+
+    padding: 5em 1em 1.4em 1em;
 
     @include responsive(desktop) {
-        max-width: calc(100% - 2.4em);
+        padding: 5em 2.4em 1.4em 2.4em;
     }
+
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .wrapper {
+    @include wrapper();
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+
     @include wrapper();
 }

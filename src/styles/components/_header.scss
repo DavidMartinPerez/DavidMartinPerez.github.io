@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 1.4em 2.4em 0.5em 2.4em;
+    padding: 2em 2.4em 1em 2.4em;
     position: fixed;
     top: 0;
     width: 100%;
@@ -21,8 +21,8 @@
 
     &__logo{
         img {
-            width: 32px;
-            height: 24px;
+            width: 48px;
+            height: 36px;
         }
     }
 
@@ -132,10 +132,7 @@
 [data-theme="dark"] {
     .header {
         &__logo {
-            img {
-                -webkit-filter: invert(100%);
-                filter: invert(100%);
-            }
+            img {}
         }
     }
 }

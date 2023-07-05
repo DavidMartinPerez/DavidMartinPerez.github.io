@@ -1,6 +1,7 @@
 .education {
     &__title {
         @extend %title;
+        text-align: center;
         @include gradientIntensiveOrange();
     }
 }

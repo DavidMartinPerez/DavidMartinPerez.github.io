@@ -2,13 +2,12 @@
     display: flex;
     flex-direction: column;
     min-height: auto;
-    padding: 5em 2.4em 1.4em 2.4em;
-
+    max-width: inherit;
 
     @include responsive(desktop) {
         flex-direction: row;
         justify-content: space-around;
-        min-height: 97vh;
+        min-height: 100vh;
         align-items: center;
 
         padding-top: 12em;
@@ -30,40 +29,72 @@
 
     &__description {
 
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 30px alphaByHex(#01cfea, 33);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
-        border: 0.1px solid rgba(255, 255, 255, 0.2);
-        padding: 35px;
-        z-index: 10;
-
         @include responsive(desktop) {
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            min-height: 350px;
-            min-width: 450px;
-            padding: 15px;
-            position: relative;
-            left: 3%;
+            margin-left: -30px;
+        }
+        @include responsive(big-desktop) {
+            margin-left: inherit;
         }
 
-        @include responsive(big-desktop) {
+        //Bubble fondo
+        &::before {
+            @include responsive(desktop){
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                top: 0;
+                margin-top: 8rem;
+                background: var(--magenta);
+                background: radial-gradient(circle, var(--darkblue) 0%, var(--intesiveblue) 90%);
+                border-radius: 50%;
+                filter: blur(10rem);
+            }
+        }
+
+        &--content {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px alphaByHex(#01cfea, 33);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 0.1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
             padding: 35px;
-            max-width: 800px;
-            height: 400px;
-            position: relative;
-            left: 5%;
+            z-index: 10;
+            width: 100%;
+
+            @include responsive(desktop) {
+                top: -30px;
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                min-height: 350px;
+                min-width: 450px;
+                padding: 15px;
+                position: relative;
+                left: 10%;
+            }
+
+            @include responsive(big-desktop) {
+                padding: 35px;
+                max-width: 850px;
+                height: 400px;
+                position: relative;
+                left: 12%;
+            }
         }
 
         &--title {
             @extend %title;
-            @include gradientIntensiveMagenta();
+            @include gradientMulticolor();
+
             display: block;
             letter-spacing: 4px;
+            animation: gradient 3s ease infinite;
+            background-size: 400% 400%;
         }
 
         &--subtitle {
@@ -79,11 +110,6 @@
 
             @include responsive(desktop) {
                 font-size: 2em;
-                text-shadow:
-                    -2px -2px 0 var(--intesiveblue),
-                    2px -2px 0 var(--intesiveblue),
-                    2px 2px 0 var(--intesiveblue),
-                    -2px 2px 0 var(--intesiveblue);
             }
 
             @include responsive(big-desktop) {
@@ -116,6 +142,7 @@
 
     &__title {
         @extend %title;
+        font-size: 1.7rem;
         @include gradientIntensiveMagenta();
         display: block;
     }
@@ -127,6 +154,7 @@
         margin-left: 150px;
         margin-top: -125px;
         background: -webkit-linear-gradient(var(--pink) 25%, var(--magenta) 100%);
+        border-radius: 25px 0 0 25px;
 
         @include responsive(desktop) {
             width: 60%;
@@ -207,9 +235,9 @@
 
         &--bottom {
             p {
-                top: 45%;
+                top: 500px;
                 @include responsive(desktop) {
-                    top: 50%;
+                    top: 450px;
                 }
             }
         }
@@ -218,7 +246,7 @@
             text-shadow:
                 -2px -2px 0 var(--intesiveblue),
                 2px -2px 0 var(--lightgreen),
-                2px 2px 0 var(--pink),
+                2px 2px 0 var(--magenta),
                 -2px 2px 0 var(--intesiveblue);
         }
         &--wave {
